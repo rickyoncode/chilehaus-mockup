@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-carbon text-bone">
+    <div className="min-h-screen bg-forest text-bone wood-grain">
       <Nav />
       <main>
         <Hero />

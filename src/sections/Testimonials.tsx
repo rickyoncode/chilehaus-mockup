@@ -12,7 +12,7 @@ const LOGOS = [
 const QUOTES = [
   {
     quote:
-      'Chile House resolvió el detalle que otros no ven. El ensamblaje llegó a obra sin una sola corrección.',
+      'CHILEHAUS resolvió el detalle que otros no ven. El ensamblaje llegó a obra sin una sola corrección.',
     name: 'Isidora Muñoz',
     role: 'Arquitecta · Estudio Araya',
   },
@@ -26,7 +26,7 @@ const QUOTES = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-32 border-t border-carbon-border">
+    <section className="py-24 md:py-32 border-t border-forest-border">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <Reveal>
           <h2 className="font-display font-medium text-4xl md:text-5xl leading-tight">
@@ -39,7 +39,7 @@ export default function Testimonials() {
             {LOGOS.map((name, i) => (
               <div
                 key={i}
-                className="text-ash-dim hover:text-bone transition-colors text-center font-display tracking-wide text-sm md:text-base"
+                className="text-ash-dim hover:text-gold transition-colors text-center font-display tracking-wide text-sm md:text-base"
               >
                 {name}
               </div>
@@ -50,14 +50,14 @@ export default function Testimonials() {
         <div className="mt-20 grid md:grid-cols-2 gap-6 md:gap-8">
           {QUOTES.map((q, i) => (
             <Reveal key={i} delay={i * 150}>
-              <blockquote className="p-8 md:p-10 border border-carbon-border hover:border-cyan-electric/50 transition-colors bg-carbon-soft">
-                <p className="text-bone text-lg leading-relaxed">
+              <blockquote className="p-8 md:p-10 border border-forest-border hover:border-gold/60 transition-colors bg-forest-soft">
+                <p className="text-bone text-lg leading-relaxed font-display italic">
                   "{q.quote}"
                 </p>
                 <footer className="mt-6 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-wood-dark to-wood-light" />
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-bark to-gold" />
                   <div>
-                    <div className="font-medium text-sm">{q.name}</div>
+                    <div className="font-medium text-sm text-bone">{q.name}</div>
                     <div className="text-xs text-ash-dim">{q.role}</div>
                   </div>
                 </footer>
@@ -67,7 +67,7 @@ export default function Testimonials() {
         </div>
 
         <p className="mt-12 text-xs text-ash-dim text-center">
-          * Logos y testimonios son placeholders — contenido real pendiente de Chile House.
+          * Logos y testimonios son placeholders — contenido real pendiente de CHILEHAUS.
         </p>
       </div>
     </section>

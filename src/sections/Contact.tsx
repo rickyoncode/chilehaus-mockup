@@ -14,7 +14,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="py-24 md:py-32 border-t border-carbon-border bg-carbon-soft"
+      className="py-24 md:py-32 border-t border-forest-border bg-forest-soft"
     >
       <div className="max-w-3xl mx-auto px-6 md:px-10">
         <Reveal>
@@ -30,7 +30,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="mt-14 space-y-8">
             <Field label="Nombre" name="name" required />
             <Field label="Email" name="email" type="email" required />
-            <Field label="Teléfono (opcional)" name="phone" type="tel" />
+            <Field label="Teléfono / WhatsApp (opcional)" name="phone" type="tel" />
 
             <div className="grid md:grid-cols-2 gap-8">
               <Select label="Rol" name="role" options={['Arquitecto', 'Constructor', 'Mandante', 'Otro']} />
@@ -46,12 +46,47 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={sent}
-                className="px-8 py-3 bg-cyan-electric text-carbon font-medium hover:bg-cyan-glow transition-all btn-shimmer disabled:opacity-60"
+                className="px-8 py-3 bg-gold text-forest-deep font-medium hover:bg-gold-bright transition-all btn-shimmer disabled:opacity-60"
               >
                 {sent ? 'Mensaje enviado ✓' : 'Enviar →'}
               </button>
             </div>
           </form>
+        </Reveal>
+
+        <Reveal delay={300}>
+          <div className="mt-16 pt-10 border-t border-forest-border grid md:grid-cols-3 gap-6 text-sm text-ash">
+            <div>
+              <div className="text-[10px] tracking-[0.3em] uppercase text-ash-dim mb-2">
+                Email
+              </div>
+              <a
+                href="mailto:info@chilehaus.cl"
+                className="text-bone hover:text-gold transition-colors"
+              >
+                info@chilehaus.cl
+              </a>
+            </div>
+            <div>
+              <div className="text-[10px] tracking-[0.3em] uppercase text-ash-dim mb-2">
+                WhatsApp
+              </div>
+              <a
+                href="https://wa.me/56954085135"
+                target="_blank"
+                rel="noopener"
+                className="text-bone hover:text-gold transition-colors"
+              >
+                +56 9 5408 5135
+              </a>
+            </div>
+            <div>
+              <div className="text-[10px] tracking-[0.3em] uppercase text-ash-dim mb-2">
+                Taller
+              </div>
+              <p className="text-bone">Carlos Acharan 835<br/>Paillaco, Los Ríos</p>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>
@@ -72,13 +107,13 @@ function Field({ label, name, type = 'text', required, textarea }: FieldProps) {
       <label className="block">
         <span className="block text-xs text-ash uppercase tracking-widest mb-2">
           {label}
-          {required && <span className="text-cyan-electric ml-1">*</span>}
+          {required && <span className="text-gold ml-1">*</span>}
         </span>
         <textarea
           name={name}
           required={required}
           rows={4}
-          className="w-full bg-transparent border-b border-carbon-border focus:border-cyan-electric outline-none py-3 text-bone transition-colors resize-none"
+          className="w-full bg-transparent border-b border-forest-border focus:border-gold outline-none py-3 text-bone transition-colors resize-none"
         />
       </label>
     )
@@ -87,13 +122,13 @@ function Field({ label, name, type = 'text', required, textarea }: FieldProps) {
     <label className="block">
       <span className="block text-xs text-ash uppercase tracking-widest mb-2">
         {label}
-        {required && <span className="text-cyan-electric ml-1">*</span>}
+        {required && <span className="text-gold ml-1">*</span>}
       </span>
       <input
         type={type}
         name={name}
         required={required}
-        className="w-full bg-transparent border-b border-carbon-border focus:border-cyan-electric outline-none py-3 text-bone transition-colors"
+        className="w-full bg-transparent border-b border-forest-border focus:border-gold outline-none py-3 text-bone transition-colors"
       />
     </label>
   )
@@ -107,10 +142,10 @@ function Select({ label, name, options }: { label: string; name: string; options
       </span>
       <select
         name={name}
-        className="w-full bg-transparent border-b border-carbon-border focus:border-cyan-electric outline-none py-3 text-bone transition-colors appearance-none cursor-pointer"
+        className="w-full bg-transparent border-b border-forest-border focus:border-gold outline-none py-3 text-bone transition-colors appearance-none cursor-pointer"
       >
         {options.map((o) => (
-          <option key={o} value={o} className="bg-carbon-soft">
+          <option key={o} value={o} className="bg-forest-soft">
             {o}
           </option>
         ))}

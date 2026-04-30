@@ -1,37 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-carbon: #0A0A0A;
-  --color-carbon-soft: #141414;
-  --color-carbon-border: #1F1F1F;
-  --color-bone: #F5F5F0;
-  --color-ash: #B0B0A8;
-  --color-ash-dim: #6E6E68;
-  --color-cyan-electric: #00E5FF;
-  --color-cyan-glow: #33EEFF;
-  --color-cyan-deep: #0088B0;
-  --color-wood-dark: #A07040;
-  --color-wood-light: #D4A06A;
-  --color-forest: #1A3A2A;
+  /* Bosque — fondo dominante (brandboard primario verde) */
+  --color-forest: #14311F;
+  --color-forest-deep: #0C1F13;
+  --color-forest-soft: #1A3D26;
+  --color-forest-border: #234A33;
 
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  /* Dorado — acento principal (brandboard primario dorado) */
+  --color-gold: #BCA36C;
+  --color-gold-bright: #D8BD83;
+  --color-gold-deep: #8E7A4D;
+
+  /* Texto */
+  --color-bone: #F5F0E4;
+  --color-ash: #B0AC95;
+  --color-ash-dim: #6E6A5A;
+
+  /* Complementarios brandboard */
+  --color-bark: #685642;
+  --color-leaf: #B7C68B;
+  --color-sand: #DED29E;
+
+  /* Aliases madera */
+  --color-wood-dark: #685642;
+  --color-wood-light: #BCA36C;
+
+  --font-display: "Cormorant Garamond", "Cormorant", ui-serif, Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-}
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj62UXskPMBBSSJLm2E.woff2") format("woff2");
 }
 
 html {
@@ -40,14 +36,35 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-carbon);
+  background: var(--color-forest);
   color: var(--color-bone);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes draw-circuit {
+/* Veta de madera sutil — capa de fondo conceptual de naturaleza */
+.wood-grain {
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0,
+      transparent 2px,
+      rgb(188 163 108 / 0.012) 2px,
+      rgb(188 163 108 / 0.012) 3px,
+      transparent 3px,
+      transparent 7px
+    ),
+    repeating-linear-gradient(
+      88deg,
+      transparent 0,
+      transparent 17px,
+      rgb(104 86 66 / 0.018) 17px,
+      rgb(104 86 66 / 0.018) 18px
+    );
+}
+
+@keyframes draw-line {
   from { stroke-dashoffset: 1000; }
   to { stroke-dashoffset: 0; }
 }
@@ -57,12 +74,17 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes pulse-cyan {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(0 229 255 / 0.35); }
-  50% { box-shadow: 0 0 0 12px rgb(0 229 255 / 0); }
+@keyframes ring-pulse {
+  0%, 100% { opacity: 0.18; transform: scale(1); }
+  50% { opacity: 0.32; transform: scale(1.02); }
 }
 
-@keyframes shimmer {
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+@keyframes shimmer-gold {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
@@ -74,11 +96,16 @@ body {
 .anim-draw {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: draw-circuit 1.5s ease-out forwards;
+  animation: draw-line 1.8s ease-out forwards;
+}
+
+.anim-ring-pulse {
+  transform-origin: center;
+  animation: ring-pulse 6s ease-in-out infinite;
 }
 
 .btn-glow:hover {
-  box-shadow: 0 0 24px 0 rgb(0 229 255 / 0.4);
+  box-shadow: 0 0 24px 0 rgb(188 163 108 / 0.4);
 }
 
 .btn-shimmer {
@@ -93,7 +120,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgb(0 229 255 / 0.3) 50%,
+    rgb(216 189 131 / 0.35) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
@@ -103,5 +130,5 @@ body {
 
 .btn-shimmer:hover::before {
   opacity: 1;
-  animation: shimmer 1.2s ease-out;
+  animation: shimmer-gold 1.2s ease-out;
 }

@@ -19,12 +19,17 @@ export default function Nav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-carbon/80 backdrop-blur-md border-b border-carbon-border' : ''
+        scrolled ? 'bg-forest/85 backdrop-blur-md border-b border-forest-border' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a href="#" className="font-display font-semibold tracking-[0.2em] text-lg">
-          CHILE HOUSE
+        <a href="#" className="flex items-baseline gap-3">
+          <span className="font-display font-semibold tracking-[0.18em] text-xl text-gold">
+            CHILEHAUS
+          </span>
+          <span className="hidden sm:inline text-[10px] tracking-[0.25em] uppercase text-ash-dim">
+            Arquitectura · Madera
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -32,14 +37,14 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-ash hover:text-cyan-electric transition-colors"
+              className="text-sm text-ash hover:text-gold-bright transition-colors"
             >
               {l.label}
             </a>
           ))}
           <a
             href="#contacto"
-            className="text-sm px-5 py-2 border border-cyan-electric text-cyan-electric hover:bg-cyan-electric hover:text-carbon transition-all btn-shimmer"
+            className="text-sm px-5 py-2 border border-gold text-gold hover:bg-gold hover:text-forest-deep transition-all btn-shimmer"
           >
             Conversemos
           </a>
@@ -67,14 +72,14 @@ export default function Nav() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-carbon-soft border-t border-carbon-border">
+        <div className="md:hidden bg-forest-soft border-t border-forest-border">
           <nav className="flex flex-col px-6 py-4 gap-4">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-ash hover:text-cyan-electric py-2"
+                className="text-sm text-ash hover:text-gold-bright py-2"
               >
                 {l.label}
               </a>
@@ -82,7 +87,7 @@ export default function Nav() {
             <a
               href="#contacto"
               onClick={() => setOpen(false)}
-              className="text-sm px-5 py-3 border border-cyan-electric text-cyan-electric text-center"
+              className="text-sm px-5 py-3 border border-gold text-gold text-center"
             >
               Conversemos
             </a>

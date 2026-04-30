@@ -1,6 +1,8 @@
-# Chile House — Mockup
+# CHILEHAUS — Mockup
 
-Maqueta interactiva del sitio web de Chile House: empresa chilena de manufactura avanzada en madera con foco en digitalización y maquinaria CNC.
+Maqueta interactiva del sitio web de **CHILEHAUS** (Chile Haus Ltda.):
+arquitectura e ingeniería en madera, manufactura avanzada CNC y digitalización
+de procesos constructivos. Desde Paillaco al sur de Chile.
 
 **Demo en vivo:** https://rickyoncode.github.io/chilehaus-mockup/
 
@@ -13,10 +15,10 @@ Maqueta interactiva del sitio web de Chile House: empresa chilena de manufactura
 ## Desarrollo
 
 ```bash
-npm install
-npm run dev        # desarrollo
-npm run build      # build producción
-npm run preview    # preview del build
+yarn install
+yarn dev        # desarrollo
+yarn build      # build producción
+yarn preview    # preview del build
 ```
 
 ## Deploy
@@ -31,18 +33,35 @@ src/
 ├── main.tsx
 ├── index.css          # theme Tailwind v4 + tipografías + animaciones
 ├── sections/          # las 9 secciones del one-pager
-├── components/        # Nav, Counter, Reveal, CircuitLines
+├── components/
+│   ├── Nav.tsx
+│   ├── NaturalMotif.tsx   # anillos de crecimiento + ramificaciones
+│   ├── Counter.tsx
+│   └── Reveal.tsx
 └── pages/
     └── Shop.tsx       # placeholder "Tienda próximamente"
 ```
 
-## Paleta
+## Paleta (brandboard CHILEHAUS)
 
 | Uso | Hex |
 |---|---|
-| Fondo | `#0A0A0A` |
-| Acento | `#00E5FF` (cian eléctrico) |
-| Madera | `#A07040` / `#D4A06A` |
-| Texto | `#F5F5F0` |
+| Bosque (primario) | `#14311F` |
+| Bosque profundo | `#0C1F13` |
+| Dorado (acento) | `#BCA36C` |
+| Dorado brillante | `#D8BD83` |
+| Hueso | `#F5F0E4` |
+| Café (complementario) | `#685642` |
+| Verde claro | `#B7C68B` |
+| Beige | `#DED29E` |
 
-Estética retrofuturista: TRON legado + madera como tecnología natural.
+## Tipografía
+
+- Títulos: **Cormorant Garamond** (serif clásica)
+- Textos: **Inter** (sans-serif geométrica)
+
+## Concepto
+
+Naturaleza ↔ tecnología. La madera como **tecnología natural**. Anillos de
+crecimiento, ramificaciones orgánicas y entramado tipo Fachwerkhaus como
+lenguaje visual.
