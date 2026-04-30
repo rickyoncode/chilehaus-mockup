@@ -2,29 +2,34 @@ import NaturalMotif from '../components/NaturalMotif'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden bg-forest-deep text-bone wood-grain-dark"
+    >
       <NaturalMotif />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 w-full pt-24 pb-12">
         <div className="max-w-4xl">
-          <p
-            className="text-xs md:text-sm tracking-[0.4em] uppercase text-gold anim-fade-up opacity-0"
-            style={{ animationDelay: '0.4s' }}
+          <div
+            className="anim-fade-up opacity-0 mb-8"
+            style={{ animationDelay: '0.2s' }}
           >
-            Arquitectura e Ingeniería en Madera
-          </p>
+            <p className="text-[11px] md:text-xs tracking-[0.4em] uppercase text-gold leading-relaxed">
+              Arquitectura e Ingeniería en Madera
+            </p>
+          </div>
 
           <h1
-            className="mt-6 font-display font-medium text-5xl md:text-7xl leading-[1.05] tracking-tight anim-fade-up opacity-0"
-            style={{ animationDelay: '0.7s' }}
+            className="font-display font-medium text-5xl md:text-7xl leading-[1.05] tracking-tight anim-fade-up opacity-0"
+            style={{ animationDelay: '0.6s' }}
           >
             Digitalización y manufactura{' '}
             <em className="not-italic text-gold-bright">avanzada en madera.</em>
           </h1>
 
           <p
-            className="mt-8 text-lg md:text-xl text-ash max-w-2xl anim-fade-up opacity-0 leading-relaxed"
-            style={{ animationDelay: '1.0s' }}
+            className="mt-8 text-lg md:text-xl text-bone/75 max-w-2xl anim-fade-up opacity-0 leading-relaxed"
+            style={{ animationDelay: '0.9s' }}
           >
             Optimización y automatización de procesos constructivos, tipo
             boutique industrializada. Desde Paillaco al sur de Chile.
@@ -32,7 +37,7 @@ export default function Hero() {
 
           <div
             className="mt-12 flex flex-wrap items-center gap-6 anim-fade-up opacity-0"
-            style={{ animationDelay: '1.3s' }}
+            style={{ animationDelay: '1.2s' }}
           >
             <a
               href="#contacto"
@@ -42,7 +47,7 @@ export default function Hero() {
             </a>
             <a
               href="#proceso"
-              className="text-ash hover:text-bone transition-colors border-b border-transparent hover:border-gold pb-1 tracking-wide"
+              className="text-bone/80 hover:text-gold transition-colors border-b border-transparent hover:border-gold pb-1 tracking-wide"
             >
               Ver proceso
             </a>
@@ -52,7 +57,7 @@ export default function Hero() {
 
       <a
         href="#manifiesto"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ash-dim hover:text-gold transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-bone/60 hover:text-gold transition-colors animate-bounce"
         aria-label="Scroll"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

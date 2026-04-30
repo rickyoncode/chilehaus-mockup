@@ -1,19 +1,24 @@
+import LogoMark from '../components/LogoMark'
+
 export default function Shop() {
   return (
-    <div className="min-h-screen bg-forest text-bone wood-grain flex items-center justify-center px-6">
+    <div className="min-h-screen bg-paper text-ink wood-grain-light flex items-center justify-center px-6">
       <div className="max-w-xl text-center">
-        <div className="font-display font-semibold tracking-[0.18em] text-2xl text-gold mb-2">
-          CHILEHAUS
+        <div className="inline-flex flex-col items-center mb-12">
+          <LogoMark className="w-20 h-20 text-gold-deep" />
+          <div className="mt-4 font-display font-semibold tracking-[0.18em] text-2xl text-gold-deep">
+            CHILEHAUS
+          </div>
+          <p className="mt-1 text-[10px] tracking-[0.3em] uppercase text-ink-dim">
+            Arquitectura e Ingeniería en Madera
+          </p>
         </div>
-        <p className="text-[10px] tracking-[0.3em] uppercase text-ash-dim mb-12">
-          Arquitectura e Ingeniería en Madera
-        </p>
 
-        <h1 className="font-display font-medium text-4xl md:text-5xl leading-tight">
-          Tienda · <em className="not-italic text-gold-bright">próximamente.</em>
+        <h1 className="font-display font-medium text-4xl md:text-5xl leading-tight text-forest">
+          Tienda · <em className="not-italic text-gold-deep">próximamente.</em>
         </h1>
 
-        <p className="mt-8 text-ash text-lg leading-relaxed">
+        <p className="mt-8 text-ink-soft text-lg leading-relaxed">
           Estamos preparando una selección de productos en madera optimizada.
           Mientras tanto, conversemos si necesitas algo antes.
         </p>
@@ -21,7 +26,7 @@ export default function Shop() {
         <div className="mt-12 flex flex-wrap items-center justify-center gap-6">
           <a
             href="#"
-            className="text-ash hover:text-bone transition-colors border-b border-transparent hover:border-gold pb-1"
+            className="text-ink-soft hover:text-forest transition-colors border-b border-transparent hover:border-gold-deep pb-1"
           >
             ← Volver
           </a>
@@ -30,7 +35,7 @@ export default function Shop() {
             onClick={() => {
               window.location.hash = ''
             }}
-            className="px-8 py-3 bg-gold text-forest-deep font-medium hover:bg-gold-bright transition-all btn-shimmer"
+            className="px-8 py-3 bg-forest text-bone font-medium hover:bg-forest-deep transition-all btn-shimmer"
           >
             Conversemos →
           </a>

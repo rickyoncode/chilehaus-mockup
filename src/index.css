@@ -1,18 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Bosque — fondo dominante (brandboard primario verde) */
+  /* Bosque — fondo dominante de los momentos dramáticos (hero, carbono, footer) */
   --color-forest: #14311F;
   --color-forest-deep: #0C1F13;
   --color-forest-soft: #1A3D26;
   --color-forest-border: #234A33;
 
-  /* Dorado — acento principal (brandboard primario dorado) */
+  /* Papel/crema — fondo dominante del cuerpo (brandboard usa este mood) */
+  --color-paper: #F5EFE0;
+  --color-paper-soft: #FAF6EA;
+  --color-paper-warm: #ECE3CC;
+  --color-paper-border: #D9CFB3;
+
+  /* Dorado — acento principal */
   --color-gold: #BCA36C;
   --color-gold-bright: #D8BD83;
   --color-gold-deep: #8E7A4D;
 
-  /* Texto */
+  /* Texto sobre fondo claro */
+  --color-ink: #14311F;
+  --color-ink-soft: #2D4A38;
+  --color-ink-dim: #6E7568;
+
+  /* Texto sobre fondo oscuro */
   --color-bone: #F5F0E4;
   --color-ash: #B0AC95;
   --color-ash-dim: #6E6A5A;
@@ -36,31 +47,45 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-forest);
-  color: var(--color-bone);
+  background: var(--color-paper);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Veta de madera sutil — capa de fondo conceptual de naturaleza */
-.wood-grain {
+/* Veta de madera muy sutil para fondos crema */
+.wood-grain-light {
   background-image:
     repeating-linear-gradient(
       92deg,
       transparent 0,
-      transparent 2px,
-      rgb(188 163 108 / 0.012) 2px,
-      rgb(188 163 108 / 0.012) 3px,
       transparent 3px,
-      transparent 7px
+      rgb(104 86 66 / 0.025) 3px,
+      rgb(104 86 66 / 0.025) 4px,
+      transparent 4px,
+      transparent 9px
     ),
     repeating-linear-gradient(
       88deg,
       transparent 0,
-      transparent 17px,
-      rgb(104 86 66 / 0.018) 17px,
-      rgb(104 86 66 / 0.018) 18px
+      transparent 21px,
+      rgb(140 110 70 / 0.022) 21px,
+      rgb(140 110 70 / 0.022) 22px
+    );
+}
+
+/* Veta de madera para fondos oscuros */
+.wood-grain-dark {
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      transparent 0,
+      transparent 3px,
+      rgb(216 189 131 / 0.022) 3px,
+      rgb(216 189 131 / 0.022) 4px,
+      transparent 4px,
+      transparent 9px
     );
 }
 
@@ -72,16 +97,6 @@ body {
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes ring-pulse {
-  0%, 100% { opacity: 0.18; transform: scale(1); }
-  50% { opacity: 0.32; transform: scale(1.02); }
-}
-
-@keyframes leaf-sway {
-  0%, 100% { transform: rotate(-1.5deg); }
-  50% { transform: rotate(1.5deg); }
 }
 
 @keyframes shimmer-gold {
@@ -97,11 +112,6 @@ body {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: draw-line 1.8s ease-out forwards;
-}
-
-.anim-ring-pulse {
-  transform-origin: center;
-  animation: ring-pulse 6s ease-in-out infinite;
 }
 
 .btn-glow:hover {
@@ -120,7 +130,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgb(216 189 131 / 0.35) 50%,
+    rgb(216 189 131 / 0.45) 50%,
     transparent 100%
   );
   background-size: 200% 100%;

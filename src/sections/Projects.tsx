@@ -41,10 +41,16 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="proyectos" className="py-24 md:py-32 border-t border-forest-border">
+    <section
+      id="proyectos"
+      className="py-24 md:py-36 bg-paper text-ink border-t border-paper-border"
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <Reveal>
-          <h2 className="font-display font-medium text-4xl md:text-5xl leading-tight">
+          <p className="text-[11px] tracking-[0.4em] uppercase text-gold-deep">
+            Proyectos · 2024–2025
+          </p>
+          <h2 className="mt-3 font-display font-medium text-4xl md:text-5xl leading-tight text-forest">
             Proyectos recientes.
           </h2>
         </Reveal>
@@ -52,21 +58,21 @@ export default function Projects() {
         <div className="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
           {PROJECTS.map((p, i) => (
             <Reveal key={i} delay={(i % 3) * 100}>
-              <article className="group relative overflow-hidden border border-forest-border hover:border-gold transition-all duration-300 bg-forest-soft">
-                <div className="aspect-[4/3] overflow-hidden bg-forest-deep">
+              <article className="group relative overflow-hidden border border-paper-border hover:border-gold transition-all duration-300 bg-paper-soft">
+                <div className="aspect-[4/3] overflow-hidden bg-paper-warm">
                   <img
                     src={p.img}
                     alt={p.title}
                     loading="lazy"
-                    className="w-full h-full object-cover saturate-[0.6] group-hover:saturate-100 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover saturate-[0.7] group-hover:saturate-100 group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-display font-medium text-xl text-bone">
+                  <h3 className="font-display font-medium text-xl text-forest">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-ash mt-1">{p.type}</p>
-                  <p className="text-xs text-gold mt-3 font-mono tracking-wide">
+                  <p className="text-sm text-ink-soft mt-1">{p.type}</p>
+                  <p className="text-xs text-gold-deep mt-3 font-mono tracking-wide font-medium">
                     {p.carbon} capturadas
                   </p>
                 </div>
@@ -75,7 +81,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <p className="mt-12 text-xs text-ash-dim text-center max-w-xl mx-auto">
+        <p className="mt-12 text-xs text-ink-dim text-center max-w-xl mx-auto">
           * Imágenes de referencia — los renders y fotografías finales serán
           provistos por CHILEHAUS. Cifras de carbono estimadas según el
           estándar de cada modelo, confirmadas en el reporte del proyecto.

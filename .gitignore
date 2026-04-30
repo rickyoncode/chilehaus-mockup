@@ -2,6 +2,7 @@ node_modules/
 dist/
 build/
 coverage/
+screenshots/
 .env
 .env.local
 .env.*.local
