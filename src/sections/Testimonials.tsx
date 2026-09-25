@@ -53,12 +53,12 @@ export default function Testimonials() {
         <div className="mt-20 grid md:grid-cols-2 gap-6 md:gap-8">
           {QUOTES.map((q, i) => (
             <Reveal key={i} delay={i * 150}>
-              <blockquote className="p-8 md:p-10 border border-paper-border hover:border-gold-deep transition-colors bg-paper-soft shadow-sm">
+              <blockquote className="p-8 md:p-10 border border-paper-border hover:border-gold-deep transition-colors bg-paper-soft">
                 <p className="text-forest text-xl leading-relaxed font-display italic">
                   "{q.quote}"
                 </p>
                 <footer className="mt-6 flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-bark to-gold" />
+                  <div className="w-10 h-10 rounded-full bg-gold-deep" />
                   <div>
                     <div className="font-medium text-sm text-forest">{q.name}</div>
                     <div className="text-xs text-ink-dim">{q.role}</div>

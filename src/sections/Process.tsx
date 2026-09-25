@@ -50,28 +50,16 @@ export default function Process() {
         </Reveal>
 
         <div className="mt-16 grid md:grid-cols-5 gap-8 md:gap-4 relative">
-          {/* Conector orgánico — rama dorada que une los nodos */}
-          <svg
-            className="hidden md:block absolute left-[6%] right-[6%] top-7 w-[88%] pointer-events-none"
-            viewBox="0 0 1000 24"
-            preserveAspectRatio="none"
+          <div
+            className="hidden md:block absolute left-[6%] right-[6%] top-7 h-px bg-paper-border"
             aria-hidden="true"
-          >
-            <path
-              d="M 0 12 Q 125 4 250 12 T 500 12 T 750 12 T 1000 12"
-              fill="none"
-              stroke="#BCA36C"
-              strokeWidth="1.5"
-              opacity="0.7"
-              strokeLinecap="round"
-            />
-          </svg>
+          />
 
           {STEPS.map((step, i) => (
             <Reveal key={i} delay={i * 150}>
               <div className="flex md:flex-col gap-5 md:gap-0">
                 <div className="relative flex-shrink-0 z-10">
-                  <div className="w-14 h-14 rounded-full bg-paper border-2 border-gold-deep flex items-center justify-center font-display font-semibold text-gold-deep text-lg shadow-sm">
+                  <div className="w-14 h-14 rounded-full bg-paper border border-gold-deep flex items-center justify-center font-display font-semibold text-gold-deep text-lg">
                     {i + 1}
                   </div>
                 </div>

@@ -42,26 +42,24 @@ src/
     └── Shop.tsx       # placeholder "Tienda próximamente"
 ```
 
-## Paleta (brandboard CHILEHAUS)
+## Paleta (manual de marca v1.0 · septiembre 2026)
 
 | Uso | Hex |
 |---|---|
-| Bosque (primario) | `#14311F` |
-| Bosque profundo | `#0C1F13` |
-| Dorado (acento) | `#BCA36C` |
-| Dorado brillante | `#D8BD83` |
-| Hueso | `#F5F0E4` |
-| Café (complementario) | `#685642` |
-| Verde claro | `#B7C68B` |
-| Beige | `#DED29E` |
+| Grafito (primario / texto / fondos oscuros) | `#2E2E2E` |
+| Grafito profundo | `#1A1A1A` |
+| Madera (acento) | `#C9A27E` |
+| Madera clara | `#D9BB94` |
+| Hueso (base) | `#F6F3ED` |
+| Tierra (acento secundario) | `#8C6F56` |
 
 ## Tipografía
 
-- Títulos: **Cormorant Garamond** (serif clásica)
-- Textos: **Inter** (sans-serif geométrica)
+- Títulos: **Manrope**
+- Textos e interfaz: **Space Grotesk**
 
 ## Concepto
 
 Naturaleza ↔ tecnología. La madera como **tecnología natural**. Anillos de
-crecimiento, ramificaciones orgánicas y entramado tipo Fachwerkhaus como
-lenguaje visual.
+crecimiento y ramificaciones orgánicas como lenguaje visual, sobre un
+logotipo puramente tipográfico (sin isologo autónomo).

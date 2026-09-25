@@ -3,7 +3,6 @@ import Nav from './components/Nav'
 import Hero from './sections/Hero'
 import Manifesto from './sections/Manifesto'
 import Process from './sections/Process'
-import Projects from './sections/Projects'
 import Services from './sections/Services'
 import Carbon from './sections/Carbon'
 import Testimonials from './sections/Testimonials'
@@ -31,7 +30,6 @@ function App() {
         <Hero />
         <Manifesto />
         <Process />
-        <Projects />
         <Services />
         <Carbon />
         <Testimonials />

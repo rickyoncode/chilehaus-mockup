@@ -59,7 +59,7 @@ export default function Services() {
         <div className="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
           {SERVICES.map((s, i) => (
             <Reveal key={i} delay={i * 150}>
-              <article className="h-full p-8 bg-paper border border-paper-border hover:border-gold-deep transition-all duration-300 group shadow-sm hover:shadow-md">
+              <article className="h-full p-8 bg-paper border border-paper-border hover:border-gold-deep transition-colors duration-300 group">
                 <div className="w-14 h-14 text-gold-deep">{s.icon}</div>
                 <h3 className="mt-6 font-display font-medium text-2xl text-forest">
                   {s.title}

@@ -1,12 +1,23 @@
-import NaturalMotif from '../components/NaturalMotif'
-
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-forest-deep text-bone wood-grain-dark"
+      className="relative min-h-screen flex items-center overflow-hidden text-bone"
     >
-      <NaturalMotif />
+      <img
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&auto=format&q=80"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(20,20,20,0.62) 40%, rgba(20,20,20,0.72) 70%, rgba(20,20,20,0.9) 100%)',
+        }}
+        aria-hidden="true"
+      />
 
       <div className="relative max-w-7xl mx-auto px-6 md:px-10 w-full pt-24 pb-12">
         <div className="max-w-4xl">
@@ -41,7 +52,7 @@ export default function Hero() {
           >
             <a
               href="#contacto"
-              className="px-8 py-4 bg-gold text-forest-deep font-medium hover:bg-gold-bright transition-all btn-glow tracking-wide"
+              className="px-8 py-4 bg-gold text-forest-deep font-medium hover:bg-gold-bright transition-colors tracking-wide"
             >
               Conversemos →
             </a>

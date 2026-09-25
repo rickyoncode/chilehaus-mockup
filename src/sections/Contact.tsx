@@ -49,7 +49,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={sent}
-                className="px-8 py-3 bg-forest text-bone font-medium hover:bg-forest-deep transition-all btn-shimmer disabled:opacity-60"
+                className="px-8 py-3 bg-forest text-bone font-medium hover:bg-forest-deep transition-colors disabled:opacity-60"
               >
                 {sent ? 'Mensaje enviado ✓' : 'Enviar →'}
               </button>

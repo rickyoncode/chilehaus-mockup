@@ -14,7 +14,6 @@ export default function Nav() {
 
   const links = [
     { href: '#proceso', label: 'Proceso' },
-    { href: '#proyectos', label: 'Proyectos' },
     { href: '#servicios', label: 'Servicios' },
   ]
 
@@ -36,22 +35,13 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
-          <LogoMark className={`w-9 h-9 ${onPaper ? 'text-gold-deep' : 'text-gold'}`} />
-          <span className="flex flex-col leading-none">
-            <span
-              className={`font-display font-semibold tracking-[0.18em] text-lg ${
-                onPaper ? 'text-gold-deep' : 'text-gold'
-              }`}
-            >
-              CHILEHAUS
-            </span>
-            <span
-              className={`hidden sm:inline mt-1 text-[9px] tracking-[0.3em] uppercase ${
-                onPaper ? 'text-ink-dim' : 'text-ash-dim'
-              }`}
-            >
-              Arquitectura · Madera
-            </span>
+          <LogoMark className="h-4 w-auto" variant={onPaper ? 'dark' : 'light'} />
+          <span
+            className={`hidden sm:inline text-[9px] tracking-[0.3em] uppercase ${
+              onPaper ? 'text-ink-dim' : 'text-ash-dim'
+            }`}
+          >
+            Arquitectura · Madera
           </span>
         </a>
 
@@ -67,7 +57,7 @@ export default function Nav() {
           ))}
           <a
             href="#contacto"
-            className={`text-sm px-5 py-2 border transition-all btn-shimmer ${ctaClass}`}
+            className={`text-sm px-5 py-2 border transition-colors ${ctaClass}`}
           >
             Conversemos
           </a>

@@ -2,16 +2,10 @@ import LogoMark from '../components/LogoMark'
 
 export default function Shop() {
   return (
-    <div className="min-h-screen bg-paper text-ink wood-grain-light flex items-center justify-center px-6">
+    <div className="min-h-screen bg-paper text-ink flex items-center justify-center px-6">
       <div className="max-w-xl text-center">
         <div className="inline-flex flex-col items-center mb-12">
-          <LogoMark className="w-20 h-20 text-gold-deep" />
-          <div className="mt-4 font-display font-semibold tracking-[0.18em] text-2xl text-gold-deep">
-            CHILEHAUS
-          </div>
-          <p className="mt-1 text-[10px] tracking-[0.3em] uppercase text-ink-dim">
-            Arquitectura e Ingeniería en Madera
-          </p>
+          <LogoMark className="h-10 w-auto" variant="dark" tagline />
         </div>
 
         <h1 className="font-display font-medium text-4xl md:text-5xl leading-tight text-forest">
@@ -35,7 +29,7 @@ export default function Shop() {
             onClick={() => {
               window.location.hash = ''
             }}
-            className="px-8 py-3 bg-forest text-bone font-medium hover:bg-forest-deep transition-all btn-shimmer"
+            className="px-8 py-3 bg-forest text-bone font-medium hover:bg-forest-deep transition-colors"
           >
             Conversemos →
           </a>
